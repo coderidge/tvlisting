@@ -23,40 +23,6 @@ class DefaultController extends Controller
     {
 
 
-        for ($i=1;$i <= 100;$i++) {
-            if($i % 3 === 0 && $i % 5 === 0) {
-                echo 'FizzBuzz';
-                echo $i;
-            }  elseif($i % 5 === 0) {
-                echo $i;
-                echo 'Buzz';
-            }  elseif($i % 3 === 0) {
-                echo $i;
-                echo 'Fizz';
-            }
-            echo '<br>';
-        }
-
-
-        $dictionary = array("kayak");
-
-        $anagram = "kayak";
-
-        $anagramSorted = sortString($anagram);
-
-
-        foreach ($dictionary as $word)
-        {
-            $wordSorted = sortString($word);
-            if ($wordSorted == $anagramSorted)
-            {
-                echo 'true';
-            }
-        }
-
-
-
-
         $url = new Client(['headers' => ['Accept' => 'application/vnd.itv.hubsvc.programme.v3+hal+json']]);
 
         $feed = $url->get('http://promoted.hubsvc.itv.com/promoted/itvonline/dotcom/programmes/mostpopular?broadcaster=itv&features=rtmpe,subs-ttml&thor=false');
