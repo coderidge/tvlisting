@@ -1,0 +1,91 @@
+<html>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+</head>
+<body>
+<div class="container-fluid">
+    <h1>ITV Hub</h1>
+
+{% for list in listing._embedded.programmes|slice(0,1) %}
+    <div class="row">
+       <div class="col-sm-6" style="background-color:lightcyan;">
+             <h1>{{ list.title }} | {{ list._embedded.latestProduction._embedded.channel.name }}</h1>
+             <h2>{{ list.synopses.ninety }}</h2>
+        </div>
+{% endfor%}
+        </div>
+        <div class="row">
+{% for list in listing._embedded.programmes|slice(3,3) %}
+           <div class="col-sm-2" style="background-color:lavender;">
+             <h3>{{ list.title }} | {{ list._embedded.latestProduction._embedded.channel.name }}</h3>
+             <h4>{{ list.synopses.ninety }}</h4>
+           </div>
+{% endfor%}
+         </div>
+
+    <div class="row">
+        {% for list in listing._embedded.programmes|slice(6,3) %}
+            <div class="col-sm-2" style="background-color:lavender;">
+                <h3>{{ list.title }} | {{ list._embedded.latestProduction._embedded.channel.name }}</h3>
+                <h4>{{ list.synopses.ninety }}</h4>
+            </div>
+        {% endfor%}
+    </div>
+
+{% for list in listing._embedded.programmes|slice(1,1) %}
+         <div class="row">
+             <div class="col-sm-6" style="background-color:lightcyan;">
+                <h1>{{ list.title }} | {{ list._embedded.latestProduction._embedded.channel.name }}</h1>
+                <h2>{{ list.synopses.ninety }}</h2>
+             </div>
+{% endfor%}
+         </div>
+
+    <div class="row">
+        {% for list in listing._embedded.programmes|slice(9,3) %}
+            <div class="col-sm-2" style="background-color:lavender;">
+                <h3>{{ list.title }} | {{ list._embedded.latestProduction._embedded.channel.name }}</h3>
+                <h4>{{ list.synopses.ninety }}</h4>
+            </div>
+        {% endfor%}
+    </div>
+
+    <div class="row">
+        {% for list in listing._embedded.programmes|slice(12,3) %}
+            <div class="col-sm-2" style="background-color:lavender;">
+                <h3>{{ list.title }} | {{ list._embedded.latestProduction._embedded.channel.name }}</h3>
+                <h4>{{ list.synopses.ninety }}</h4>
+            </div>
+        {% endfor%}
+    </div>
+
+{% for list in listing._embedded.programmes|slice(2,1) %}
+    <div class="row">
+        <div class="col-sm-6" style="background-color:lightcyan;">
+            <h1>{{ list.title }} | {{ list._embedded.latestProduction._embedded.channel.name }}</h1>
+            <h2>{{ list.synopses.ninety }}</h2>
+        </div>
+        {% endfor%}
+    </div>
+
+    <div class="row">
+        {% for list in listing._embedded.programmes|slice(15,3) %}
+            <div class="col-sm-2" style="background-color:lavender;">
+                <h3>{{ list.title }} | {{ list._embedded.latestProduction._embedded.channel.name }}</h3>
+                <h4>{{ list.synopses.ninety }}</h4>
+            </div>
+        {% endfor%}
+    </div>
+
+    <div class="row">
+        {% for list in listing._embedded.programmes|slice(18,3) %}
+            <div class="col-sm-2" style="background-color:lavender;">
+                <h3>{{ list.title }} | {{ list._embedded.latestProduction._embedded.channel.name }}</h3>
+                <h4>{{ list.synopses.ninety }}</h4>
+            </div>
+        {% endfor%}
+    </div>
+</div>
+
+</body>
+</html>

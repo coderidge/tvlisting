@@ -1,0 +1,4 @@
+services:
+#    t_vguide.example:
+#        class: TVguideBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]
